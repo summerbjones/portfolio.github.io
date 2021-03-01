@@ -1,20 +1,19 @@
-*{
-    margin:0;
-    padding:0;
+/*Wildcard styling*/
+* {
     box-sizing: border-box;
-    text-decoration: none;
 }
-.max-width{
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
+/*padding for the whole body*/
+body{
+    padding: 15px;
 }
+
 /*navbar styling*/
 .navbar{
-    position: fixed;
+    
+    position: absolute;
     width: 100%;
-    padding: 15px 0;
-    background: crimson;
+    top: 0;
+    /*background: gray;*/
     font-family: 'Ubuntu', sans-serif;
 }
 .navbar .max-width{
@@ -22,19 +21,98 @@
     align-items: center;
     justify-content: space-between;
 }
-.navbar .logo a{
-    color: #fff;
-    font-size: 35px;
-    font-weight: 600;
-}
 .navbar .menu li{ /* makes links side by side*/
     list-style: none;
     display: inline-block;
+    
 }
 .navbar .menu li a{
-    color: #fff;
+    color: black;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color:cadetblue;
 }
 
+.navbar .logo a{
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*styling the body*/
+.containter{
+    max-width: 1200px;
+    margin: auto;
+}
+h1{
+    color:green;
+}
+/*anchor tag decoration*/
+a {
+    text-decoration: none;
+    color: #5673C8;
+}
+a:hover{
+    color: lightblue;
+}
+/*paragraph tag decoration*/
+p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    color : #363945; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*row and column decoration*/
+.row{
+    margin: 0px -18px;
+    padding: 8px;
+}
+.row > .column {
+    padding: 6px;
+}
+.column{
+    float: left;
+    width: 25%;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*content decoration*/
+.content{
+    background-color: white;
+    padding: 10px;
+    border: 1px solid gray;
+}
+/*window size 850 width set*/
+@media screen and (max-width:850px){
+    .column{
+        width: 50%;
+    }
+}
+/*window size 400 width set*/
+@media screen and (max-width:400px){
+    .column{
+        width: 100%;
+    }
+}
+.boxes{
+    top: 200px;
+
+}
+footer{
+    color : #363945; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
